@@ -1,0 +1,14 @@
+﻿@model Student
+
+<h2>Hi, @Model.Name!</h2>
+<hr />
+
+@if(@Model.Confirm==true)
+{
+<span>Thank you for your participation in the course.</span>
+<div><a asp-action= "List">Click</a> to view other trainees.</div>
+}
+else
+{
+<span>We're sorry we couldn't see you with us. Hope you change your mind soon...</span>
+}

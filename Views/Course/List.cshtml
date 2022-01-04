@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Student>
+
+<div class="container m-4">
+    <div class="card mx-auto" style="width:500px;">
+        <div class="card-header">
+            <b><h3>List of course attendees</h3></b>
+        </div>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Surname</td>
+                    <td>Email</td>
+                    <td>Phone</td>
+                    <td>Confirm</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var student in Model)
+                {
+                    <tr>
+                        <td>@student.Name</td>
+                        <td>@student.SurName</td>
+                        <td>@student.Email</td>
+                        <td>@student.PhoneNumber</td>
+                        <td>@student.Confirm</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+
+
+
+

@@ -1,0 +1,43 @@
+﻿@model Student
+
+<div class="container m-4">
+    <div class="card mx-auto" style="width:500px;">
+        <div class="card-header">
+            <b><h3>Application Form</h3></b>
+        </div>
+        <div class="card-body">
+            <form asp-action="Apply" method="POST">
+                <div asp-validation-summary="All"></div>
+                <div class="mb-3">
+                    <label asp-for="Name">Name</label>
+                    <input class="form-control" asp-for="Name">
+                </div>
+                <div class="mb-3">
+                    <label asp-for="SurName">Surname</label>
+                    <input class="form-control" asp-for="SurName">
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Email">E-mail</label>
+                    <input class="form-control" asp-for="Email">
+                </div>
+                <div class="mb-3">
+                    <label asp-for="PhoneNumber">Phone</label>
+                    <input class="form-control" asp-for="PhoneNumber">
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Confirm">Will you attend the course?</label>
+                    <select class="form-control" asp-for="Confirm">
+                        <option value="">Please choose.</option>
+                        <option value="true">Yes, I will join.</option>
+                        <option value="false">No, I will not join.</option>
+                    </select>
+                </div>                
+                <input type="submit" class="btn btn-primary d-block" value="Submit" />
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
